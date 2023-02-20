@@ -22,7 +22,19 @@ def divide_or_square(num):
     else:
         return print(str(num % 5))
 
+def longest_value(dictionary):
+    longest_length = 0
+    longest_value = ""
+
+    for val in dictionary.values():
+        if len(val) > longest_length:
+            longest_length = len(val)
+            longest_value = val
+
+    return longest_value
+
 divide_or_square(6)
 divide_or_square(10)
 divide_or_square(0)
 divide_or_square(1)
+print(longest_value({'fruit': 'apple', 'color': 'green'}))
